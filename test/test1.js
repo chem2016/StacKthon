@@ -30,6 +30,7 @@ const testTree = new BST(100).insert(5).insert(15).insert(5).insert(2).insert(1)
                         .insert(204).insert(205).insert(207).insert(206).insert(208).insert(203)
                         .insert(-51).insert(-403).insert(1001).insert(57).insert(60).insert(4500)
 
+const target = 22
 // describe("findClosetValueInBst is a function", () => {
 //     it("exist", () =>{
 //         expect(findClosetValueInBst).to.be.ok
@@ -54,4 +55,4 @@ const testTree = new BST(100).insert(5).insert(15).insert(5).insert(2).insert(1)
 //     })
 //   });
 
-export {testTree}
+export {testTree, target}

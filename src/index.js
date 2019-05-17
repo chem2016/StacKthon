@@ -1,4 +1,4 @@
-const {testTree} = require('../test/test1')
+const {testTree, target} = require('../test/test1')
 const {input, answer} = require('../test/test0')
 const {input1, input1Func, answer1} = require('../test/test0')
 const nextPage = document.createElement("div")
@@ -69,6 +69,19 @@ runButton.onclick = () => {
                     document.body.appendChild(symbolFail)
                 }
             }
+            if(module.exports.number === 3){
+                console.log('This is the third function: ', module.exports)
+                const myAnswer = module.exports(testTree, target)
+                if(myAnswer === target){
+                    console.log('You Passed the third question!')
+                    document.body.appendChild(symbolPass)
+                }
+            }
+
+
+
+
+
         };
     } catch (e) {
         console.error(e);
