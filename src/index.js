@@ -3,10 +3,10 @@ const {input2, input2Func, answer2} = require('../test/stretch2')
 const {input3, answer3} = require('../test/stretch3')
 const {input4Arg1, input4Arg2, answer4} = require('../test/stretch4')
 const {input16, answer16First} = require('../test/stretch16')
-const {symbolFail, symbolPass} = require('./domElements')
-// const runTests = require('run-jasmine-browser');
+const {symbolFail, symbolPass, symbolFailBad} = require('./domElements')
 
-var square = null;
+window.mySquare = null
+
 var editor = CodeMirror.fromTextArea(document.getElementById('editor'),{
     mode: "javascript",
     theme: "dracula",
@@ -28,7 +28,7 @@ runButton.onclick = () => {
         const module = window.newGlobal.module;
         if (typeof module.exports === 'function') {
             if(module.exports.number === 1){
-                square = module.exports
+                mySquare = module.exports
                 if(module.exports(input1) === answer1){
                     console.log('You Passed the first question!')
                     document.body.appendChild(symbolPass)
@@ -40,7 +40,11 @@ runButton.onclick = () => {
             }
             if(module.exports.number === 2){
                 const myAnswer = module.exports(input2, input2Func)
-                if(JSON.stringify(myAnswer) === JSON.stringify(answer2)){
+                const myMap = module.exports
+                if((myMap.toString()).includes('map')){
+                    document.body.appendChild(symbolFailBad)
+                } 
+                else if(JSON.stringify(myAnswer) === JSON.stringify(answer2)){
                     console.log('You Passed the second question!')
                     document.body.appendChild(symbolPass)
                 }
@@ -88,4 +92,3 @@ runButton.onclick = () => {
         console.error(e);
     }
 }
-

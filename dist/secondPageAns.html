@@ -10,13 +10,16 @@
   </head>
   <body>
     <h1>Question Number 2: </h1>
-    <p>Write the map function, please do not use map and forEach keyword in javascript</p>
+    <p>Write the map function</p>
     <textarea id='editor'>
         function toMap(arr, cb) {
         // write you code here
-                
+          const retArr = []
+          for(let i = 0; i < arr.length; i++){
+            retArr.push(cb(arr[i]))
+          }
         // return you value here
-            return 
+            return retArr
         }  
         toMap.number = 2
         module.exports = toMap

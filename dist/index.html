@@ -13,11 +13,11 @@
     <script src="../jasmine/lib/jasmine-3.4.0/boot.js"></script>
 
     <!-- This is the source file -->
-    <script src="../src/index.js"></script>
+    <!-- <script defer src="../src/index.js"></script> -->
+    <!-- <script defer src="bundle.js"></script> -->
 
     <!-- Thit is the specs -->
-    <script src="../spec/SpecSquare.js"></script>
-
+    
   </head>
   <h1>Question Number 1: </h1>
   <p>Write a function that return a square of given number</p>
@@ -33,7 +33,6 @@
     square.number = 1
     module.exports = square
 
-
     </textarea>
     <p>
         please export you function at the end:
@@ -42,6 +41,9 @@
     <button id='run-button' class="button">Run</button>
     <br/>
     <button class="btn"><i class="fa fa-home"></i> <a href="./home.html" class="button">Home</a></button>
+    <br/>
     <script src="bundle.js"></script>
+    <!-- <script>var square=function(){}</script> -->
+    <script src="../spec/SpecSquare.js"></script>
   </body>
 </html>
