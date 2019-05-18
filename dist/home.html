@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Code Ninja Homepage</title>
+<script src="../node_modules/codemirror/lib/codemirror.js"></script>
+<link href="../node_modules/codemirror/lib/codemirror.css" rel="stylesheet"/>
+<script src="../node_modules/codemirror/mode/javascript/javascript.js"></script>
+<script src="../node_modules/codemirror/addon/edit/closetag.js"></script>
+<link href="../node_modules/codemirror/theme/dracula.css" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Code Ninja</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+  </div>
+</div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Algorithm Questions</h1>
+      <p>There are 16 questions for improving your javascript skills, all questions are 
+         designed by Prof and Elliot.
+      </p>
+    </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Questions</h1>
+      <p>The questions are categorized into three groups: Easy, Medium, Hard</p>
+      <table style="width:100%">
+        <tr>
+            <th>Easy</th>
+            <th>Medium</th>
+            <th>Hard</th>
+            <th>Hardest</th>
+        </tr>
+        <tr>
+            <td><a href="../dist/index.html">square</a></td>
+            <td><a href="../dist/thirdPage.html">productWhichMadeMostMoney</a></td>
+            <td><a href="../dist/fourthPage.html">largestDivisible</a></td>
+            <td><a href="../dist/Kadane.html">max sum subarray</a></td>
+        </tr>
+        <tr>
+            <td><a href="../dist/secondPage.html">map</a></td>
+            <td><a href="../dist/fifthPage.html">isEqual</a></td>
+            <td><a href="../dist/sixthPage.html">pluck</a></td>
+        </tr>
+        <tr>
+            <td><a href="../dist/seventhPage.html">LinkedList</a></td>
+            <td><a href="../dist/eighthPage.html">zip</a></td>
+            <td><a href="../dist/ninthPage.html">query</a></td>
+        </tr>
+        <tr>
+            <td><a href="../dist/tenthPage.html">Stack</a></td>
+            <td><a href="../dist/eleventhPage.html">trim</a></td>
+            <td><a href="../dist/twelfthPage.html">times</a></td>
+        </tr>
+        <tr>
+          <td><a href="../dist/thirteenthPage.html">Compose</a></td>
+          <td><a href="../dist/fourteenthPage.html">Memoize</a></td>
+          <td><a href="../dist/fifteenthPage.html">find</a></td>
+        </tr>
+        </table>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Answers</h1>
+      <p>Here are answers to 16 questions</p>
+      <table style="width:100%">
+          <tr>
+              <th>Easy</th>
+              <th>Medium</th>
+              <th>Hard</th>
+              <th>Hardest</th>
+          </tr>
+          <tr>
+              <td><a href="../dist/indexAns.html">square</a></td>
+              <td><a href="../dist/thirdPage.html">productWhichMadeMostMoney</a></td>
+              <td><a href="../dist/fourthPage.html">largestDivisible</a></td>
+              <td><a href="../dist/KadaneAns.html">max sum subarray</a></td>
+          </tr>
+          <tr>
+              <td><a href="../dist/secondPage.html">map</a></td>
+              <td><a href="../dist/fifthPage.html">isEqual</a></td>
+              <td><a href="../dist/sixthPage.html">pluck</a></td>
+          </tr>
+          <tr>
+              <td><a href="../dist/seventhPage.html">LinkedList</a></td>
+              <td><a href="../dist/eighthPage.html">zip</a></td>
+              <td><a href="../dist/ninthPage.html">query</a></td>
+          </tr>
+          <tr>
+              <td><a href="../dist/tenthPage.html">Stack</a></td>
+              <td><a href="../dist/eleventhPage.html">trim</a></td>
+              <td><a href="../dist/twelfthPage.html">times</a></td>
+          </tr>
+          <tr>
+            <td><a href="../dist/thirteenthPage.html">Compose</a></td>
+            <td><a href="../dist/fourteenthPage.html">Memoize</a></td>
+            <td><a href="../dist/fifteenthPage.html">find</a></td>
+          </tr>
+          </table>
+    </div>
+  </div>
+
+<!-- END MAIN -->
+</div>
+</body>
+</html>

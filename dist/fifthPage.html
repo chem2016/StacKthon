@@ -9,18 +9,28 @@
     <link href="../node_modules/codemirror/theme/dracula.css" rel="stylesheet"/>
   </head>
   <body>
-    <h1>Question Number 2: </h1>
-    <p>Write the map function</p>
+    <h1>Question Number 5:</h1>
+    <p>the isEqual function compares two objects. If each of the objects has the same keys and those keys have the same values, then they are considered equal</p>
+    <span>console.log(isEqual({ a: 1 }, {a : 1}));//true</span>
+    <br/>
+    <span>console.log(isEqual({ a: 1 }, {a : 3}));//false</span>
+    <br/>
+    <span>console.log(isEqual({ a: 1, x: 2 }, {a : 1}));//false</span>
+    <br/>
+    <span>console.log(isEqual({ a: 1 }, {a : 1, x: 2}));//false</span>
+    <br/>
+    <span>console.log(isEqual({ a: 1, b: 2 }, {b: 2, a : 1}));//true</span>
+    <br/>
     <textarea id='editor'>
-        function toMap(arr, cb) {
-        // write you code here
+    function isEqual(obj1, obj2) {
+    // write you code here
                 
-        // return you value here
-            return 
-        }  
-        toMap.number = 2
-        module.exports = toMap
-     
+    // return you value here
+    return 
+    }  
+
+    isEqual.number = 5
+    module.exports = isEqual
     </textarea>
     <p>
         please export you function at the end:

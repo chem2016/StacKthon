@@ -8,25 +8,27 @@
     <script src="../node_modules/codemirror/addon/edit/closetag.js"></script>
     <link href="../node_modules/codemirror/theme/dracula.css" rel="stylesheet"/>
   </head>
+  <h1>Question Number 1: </h1>
+  <p>Write a function that return a square of given number</p>
   <body>
-    <h1>Question Number 2: </h1>
-    <p>Write the map function</p>
     <textarea id='editor'>
-        function toMap(arr, cb) {
-        // write you code here
-                
-        // return you value here
-            return 
-        }  
-        toMap.number = 2
-        module.exports = toMap
-     
+    function square(a){
+      // write your code here
+      const retVal = a ** 2
+      return retVal
+          
+    }
+    
+    square.number = 1
+    module.exports = square
+
+
     </textarea>
     <p>
         please export you function at the end:
         module.exports = yourFunction
     </p>
-    <button id='run-button'>Run</button>
+    <button id='run-button' class="button">Run</button>
     <br/>
     <a href="./home.html" class="button">Home</a>
     <script src="bundle.js"></script>

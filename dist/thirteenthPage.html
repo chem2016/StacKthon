@@ -9,18 +9,25 @@
     <link href="../node_modules/codemirror/theme/dracula.css" rel="stylesheet"/>
   </head>
   <body>
-    <h1>Question Number 2: </h1>
-    <p>Write the map function</p>
+    <h1>Question Number 13:</h1>
+    <p>write the Compose function.</p>
+    <p>Take any two functions as arguments, and return a function that calls BOTH functions on any number of arguments, passing the result of the previous function into the next</p>
+    <br/>
     <textarea id='editor'>
-        function toMap(arr, cb) {
-        // write you code here
-                
-        // return you value here
-            return 
-        }  
-        toMap.number = 2
-        module.exports = toMap
+    const addTwo = a => a + 2;
+    const hollaAt = a => console.log(`Holla at ${a}!`);
      
+    const addTwoAndHolla = compose(addTwo, hollaAt); 
+    // addTwoAndHolla(2); // Logs: 'Holla at 4!'
+    function compose(addTwo, hollaAt) {
+    // write you code here
+                
+    // return you value here
+    return 
+    }  
+
+    compose.number = 13
+    module.exports = compose
     </textarea>
     <p>
         please export you function at the end:

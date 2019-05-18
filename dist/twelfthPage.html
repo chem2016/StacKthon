@@ -9,18 +9,31 @@
     <link href="../node_modules/codemirror/theme/dracula.css" rel="stylesheet"/>
   </head>
   <body>
-    <h1>Question Number 2: </h1>
-    <p>Write the map function</p>
+    <h1>Question Number 12:</h1>
+    <p>write the times function.</p>
+    <p>times function must be called with a number</p>
+    <span>const tenTimes = times(10);</span>
+    <br/>
+    <span>console.log(typeof tenTimes);// logs function</span>
+    <br/>
+    <span>console.log(tenTimes(5));// logs 50</span>
+    <br/>
+    <span>const fiveTimes = times(5);</span>
+    <br/>
+    <span>console.log(fiveTimes(5));//logs 25</span>
+    <br/>
+    <span>const badTimes = times('x');//throw an exception</span>
+    <br/>
     <textarea id='editor'>
-        function toMap(arr, cb) {
-        // write you code here
+    function times(obj) {
+    // write you code here
                 
-        // return you value here
-            return 
-        }  
-        toMap.number = 2
-        module.exports = toMap
-     
+    // return you value here
+    return 
+    }  
+
+    times.number = 12
+    module.exports = times
     </textarea>
     <p>
         please export you function at the end:

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CodeMirror</title>
+    <script src="../node_modules/codemirror/lib/codemirror.js"></script>
+    <link href="../node_modules/codemirror/lib/codemirror.css" rel="stylesheet"/>
+    <script src="../node_modules/codemirror/mode/javascript/javascript.js"></script>
+    <script src="../node_modules/codemirror/addon/edit/closetag.js"></script>
+    <link href="../node_modules/codemirror/theme/dracula.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <h1>Question Number 14:</h1>
+    <p>write the Memoize function.</p>
+    <p>type Memoize = (cb: (...args: any[]) => any) => (...args: any[]) => any;</p>
+    <br/>
+    <p>Memoize is a function that takes one argument: another function.
+
+    Memoize returns that function, wrapped in another. Memoizes purpose is to take any given function and call it again with one added behavior. If the same arguments are passed to the memoized function twice, the second time, it will look into a cache and return pre-caclulated results. This means that memoized functions are more performant each time they are called after the first time.</p>
+    <textarea id='editor'>
+    const expensiveFunc = num => {
+      for (let i = 0; i < 100000000; ++i) {};
+      
+      return num * 2;
+    };  
+    const memoedExpensiveFunc = memoize(expensiveFunc);
+    function memoize(expensiveFunc) {
+    // write you code here
+                
+    // return you value here
+    return 
+    }  
+
+    momoize.number = 14
+    module.exports = momoize
+    </textarea>
+    <p>
+        please export you function at the end:
+        module.exports = yourFunction
+    </p>
+    <button id='run-button'>Run</button>
+    <br/>
+    <a href="./home.html" class="button">Home</a>
+    <script src="bundle.js"></script>
+  </body>
+</html>

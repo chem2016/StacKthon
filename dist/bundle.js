@@ -105,31 +105,67 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const {testTree, target} = __webpack_require__(/*! ../test/test1 */ \"./test/test1.js\")\nconst {input0, answer0, input1, input1Func, answer1} = __webpack_require__(/*! ../test/test0 */ \"./test/test0.js\")\nconst {symbolFail, symbolPass, nextPage, nextPage2} = __webpack_require__(/*! ./domElements */ \"./src/domElements.js\")\n\nvar editor = CodeMirror.fromTextArea(document.getElementById('editor'),{\n    mode: \"javascript\",\n    theme: \"dracula\",\n    lineNumbers: true,\n})\n\nvar state = {\n    nextPage : false\n}\n\nconst runButton = document.getElementById('run-button'); \nrunButton.onclick = () => {\n    const currentCode = editor.getValue();\n    try {\n        window.newGlobal = {\n            window: {},\n            module: {\n                exports: null,\n            },\n        };\n        eval(`with (newGlobal) { ${currentCode} }`);\n\n        const module = window.newGlobal.module;\n        if (typeof module.exports === 'function') {\n            if(module.exports.number === 1){\n                if(module.exports(input0) === answer0){\n                    console.log('You Passed the first question!')\n                    document.body.appendChild(symbolPass)\n                    document.body.appendChild(nextPage)\n                }\n                else{\n                    console.log('You failed the second question!')\n                    document.body.appendChild(symbolFail)\n                }\n            }\n            if(module.exports.number === 2){\n                const myAnswer = module.exports(input1, input1Func)\n                if(JSON.stringify(myAnswer) === JSON.stringify(answer1)){\n                    console.log('You Passed the second question!')\n                    document.body.appendChild(symbolPass)\n                    document.body.appendChild(nextPage2)\n                }\n                else{\n                    console.log('You failed the second questoin!')\n                    document.body.appendChild(symbolFail)\n                }\n            }\n            if(module.exports.number === 3){\n                const myAnswer = module.exports(testTree, target)\n                if(myAnswer === target){\n                    console.log('You Passed the third question!')\n                    document.body.appendChild(symbolPass)\n                }\n                else{\n                    console.log('You failed the second questoin!')\n                    document.body.appendChild(symbolFail)\n                }\n            }\n\n        };\n    } catch (e) {\n        console.error(e);\n    }\n}\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const {input1, answer1} = __webpack_require__(/*! ../test/stretch1 */ \"./test/stretch1.js\")\nconst {input2, input2Func, answer2} = __webpack_require__(/*! ../test/stretch2 */ \"./test/stretch2.js\")\nconst {input3, answer3} = __webpack_require__(/*! ../test/stretch3 */ \"./test/stretch3.js\")\nconst {input4Arg1, input4Arg2, answer4} = __webpack_require__(/*! ../test/stretch4 */ \"./test/stretch4.js\")\nconst {input16, answer16First} = __webpack_require__(/*! ../test/stretch16 */ \"./test/stretch16.js\")\nconst {symbolFail, symbolPass} = __webpack_require__(/*! ./domElements */ \"./src/domElements.js\")\n// const runTests = require('run-jasmine-browser');\n\nvar editor = CodeMirror.fromTextArea(document.getElementById('editor'),{\n    mode: \"javascript\",\n    theme: \"dracula\",\n    lineNumbers: true,\n})\n\nvar state = {\n    nextPage : false\n}\n\nconst runButton = document.getElementById('run-button'); \nrunButton.onclick = () => {\n    const currentCode = editor.getValue();\n    try {\n        window.newGlobal = {\n            window: {},\n            module: {\n                exports: null,\n            },\n        };\n        eval(`with (newGlobal) { ${currentCode} }`);\n\n        const module = window.newGlobal.module;\n        if (typeof module.exports === 'function') {\n            if(module.exports.number === 1){\n                if(module.exports(input1) === answer1){\n                    console.log('You Passed the first question!')\n                    document.body.appendChild(symbolPass)\n                }\n                else{\n                    console.log('You failed the second question!')\n                    document.body.appendChild(symbolFail)\n                }\n            }\n            if(module.exports.number === 2){\n                const myAnswer = module.exports(input2, input2Func)\n                if(JSON.stringify(myAnswer) === JSON.stringify(answer2)){\n                    console.log('You Passed the second question!')\n                    document.body.appendChild(symbolPass)\n                }\n                else{\n                    console.log('You failed the second questoin!')\n                    document.body.appendChild(symbolFail)\n                }\n            }\n            if(module.exports.number === 3){\n                const myAnswer = module.exports(input3)\n                if(JSON.stringify(myAnswer) === JSON.stringify(answer3)){\n                    console.log('You Passed the third question!')\n                    document.body.appendChild(symbolPass)\n                }\n                else{\n                    console.log('You failed the third questoin!')\n                    document.body.appendChild(symbolFail)\n                }\n            }\n            if(module.exports.number === 4){\n                const myAnswer = module.exports(input4Arg1, input4Arg2)\n                if(JSON.stringify(myAnswer) === JSON.stringify(answer4)){\n                    console.log('You Passed the fourth question!')\n                    document.body.appendChild(symbolPass)\n                }\n                else{\n                    console.log('You failed the fourth questoin!')\n                    document.body.appendChild(symbolFail)\n                }\n            }\n            if(module.exports.number === 16){\n                const myAnswer = module.exports(input16)\n                if(JSON.stringify(myAnswer) === JSON.stringify(answer16First)){\n                    console.log('You Passed the sixteenth question!')\n                    document.body.appendChild(symbolPass)\n                }\n                else{\n                    console.log('You failed the sixteenth questoin!')\n                    document.body.appendChild(symbolFail)\n                }\n            }\n\n        };\n    } catch (e) {\n        console.error(e);\n    }\n}\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
-/***/ "./test/test0.js":
-/*!***********************!*\
-  !*** ./test/test0.js ***!
-  \***********************/
-/*! exports provided: input0, answer0, input1, input1Func, answer1 */
+/***/ "./test/stretch1.js":
+/*!**************************!*\
+  !*** ./test/stretch1.js ***!
+  \**************************/
+/*! exports provided: input1, answer1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"input0\", function() { return input0; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"answer0\", function() { return answer0; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"input1\", function() { return input1; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"input1Func\", function() { return input1Func; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"answer1\", function() { return answer1; });\n\nconst input0 = 5;\nconst answer0 = 25;\nconst input1 = [1,2,3]\nconst input1Func = (a) => {\n    return a**2 \n}\nconst answer1 = [1,4,9]\n\n\n\n\n//# sourceURL=webpack:///./test/test0.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"input1\", function() { return input1; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"answer1\", function() { return answer1; });\n// function square\n\nconst input1 = 5;\nconst answer1 = 25;\n\n\n\n//# sourceURL=webpack:///./test/stretch1.js?");
 
 /***/ }),
 
-/***/ "./test/test1.js":
-/*!***********************!*\
-  !*** ./test/test1.js ***!
-  \***********************/
-/*! exports provided: testTree, target */
+/***/ "./test/stretch16.js":
+/*!***************************!*\
+  !*** ./test/stretch16.js ***!
+  \***************************/
+/*! exports provided: input16, answer16First, answer16Second */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"testTree\", function() { return testTree; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"target\", function() { return target; });\n// const expect = require(\"chai\").expect;\n// const assert = require(\"chai\").assert;\n// const findClosetValueInBst = require('../findClosetValueInBst');\n\nclass BST{\n    constructor(value){\n        this.value = value;\n        this.left = null;\n        this.right = null;\n    }\n    insert(value) {\n        if(value < this.value){\n            if(this.left === null){\n                this.left = new BST(value)\n            }else{\n                this.left.insert(value)\n            }\n        }else{\n            if(this.right === null){\n                this.right = new BST(value)\n            }else{\n                this.right.insert(value)\n            }\n        }\n        return this\n    }\n}\nconst testTree = new BST(100).insert(5).insert(15).insert(5).insert(2).insert(1).insert(22)\n                        .insert(1).insert(1).insert(3).insert(1).insert(1).insert(502).insert(55000)\n                        .insert(204).insert(205).insert(207).insert(206).insert(208).insert(203)\n                        .insert(-51).insert(-403).insert(1001).insert(57).insert(60).insert(4500)\n\nconst target = 22\n// describe(\"findClosetValueInBst is a function\", () => {\n//     it(\"exist\", () =>{\n//         expect(findClosetValueInBst).to.be.ok\n//     });\n//     it(\"return a value\", ()=>{\n//         expect(findClosetValueInBst(test, 100)).to.deep.equal(100)\n//     });\n//     it(\"testing case #1\", ()=>{\n//         expect(findClosetValueInBst(test, 5)).to.deep.equal(5)\n//     });\n//     it(\"testing case #2\", ()=>{\n//         expect(findClosetValueInBst(test, 206)).to.deep.equal(206)\n//     });\n//     it(\"testing case #3\", ()=>{\n//         expect(findClosetValueInBst(test, 208)).to.deep.equal(208)\n//     });\n//     it(\"testing case #4\", ()=>{\n//         expect(findClosetValueInBst(test, 4501)).to.deep.equal(4500)\n//     });\n//     it(\"testing case #5\", ()=>{\n//         assert.equal(findClosetValueInBst(test, 4502), 4500)\n//     })\n//   });\n\n\n\n//# sourceURL=webpack:///./test/test1.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"input16\", function() { return input16; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"answer16First\", function() { return answer16First; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"answer16Second\", function() { return answer16Second; });\n// function maxSumSubarray\n\nconst input16 = [3,5,-9,1,3,-2,3,4,7,2,-9,6,3,1,-5,4];\nconst answer16First = 19;\nconst answer16Second = [1,3,-2,3,4,7,2,-9,6,3,1];\n\n\n\n\n//# sourceURL=webpack:///./test/stretch16.js?");
+
+/***/ }),
+
+/***/ "./test/stretch2.js":
+/*!**************************!*\
+  !*** ./test/stretch2.js ***!
+  \**************************/
+/*! exports provided: input2, input2Func, answer2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"input2\", function() { return input2; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"input2Func\", function() { return input2Func; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"answer2\", function() { return answer2; });\nconst input2 = [1,2,3]\nconst input2Func = (a) => {\n    return a**2 \n}\nconst answer2 = [1,4,9]\n\n\n\n\n//# sourceURL=webpack:///./test/stretch2.js?");
+
+/***/ }),
+
+/***/ "./test/stretch3.js":
+/*!**************************!*\
+  !*** ./test/stretch3.js ***!
+  \**************************/
+/*! exports provided: input3, answer3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"input3\", function() { return input3; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"answer3\", function() { return answer3; });\nconst input3 = [\n    {\n      amount: 8,\n      productId: 3\n    },\n    {\n      amount: 8,\n      productId: 3\n    },\n    {\n      amount: 8,\n      productId: 4\n    },\n    {\n      amount: 17,\n      productId: 5\n    },\n    {\n      amount: 10,\n      productId: 4\n    }\n  ];\n\n  const answer3 = { id: 4, total: 18}\n\n  \n\n//# sourceURL=webpack:///./test/stretch3.js?");
+
+/***/ }),
+
+/***/ "./test/stretch4.js":
+/*!**************************!*\
+  !*** ./test/stretch4.js ***!
+  \**************************/
+/*! exports provided: input4Arg1, input4Arg2, answer4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"input4Arg1\", function() { return input4Arg1; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"input4Arg2\", function() { return input4Arg2; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"answer4\", function() { return answer4; });\nconst input4Arg1 = [1, 2, 3, 4, 5, 6, 7]\nconst input4Arg2 = 3\nconst answer4 = 6\n\n\n\n//# sourceURL=webpack:///./test/stretch4.js?");
 
 /***/ })
 

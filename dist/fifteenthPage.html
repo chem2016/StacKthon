@@ -9,18 +9,24 @@
     <link href="../node_modules/codemirror/theme/dracula.css" rel="stylesheet"/>
   </head>
   <body>
-    <h1>Question Number 2: </h1>
-    <p>Write the map function</p>
+    <h1>Question Number 15:</h1>
+    <p>write the find method. You cannot use Array.prototype.find methods.</p>
     <textarea id='editor'>
-        function toMap(arr, cb) {
-        // write you code here
+    const arr = ['foo', 'bar', 'bazz'];
+    find(arr, (item)=> item === 'bazz');//returns 'bazz';
+    
+    const objects = [{ id: 1, name: 'foo'}, { id: 2, name: 'bar'}, { id: 3:, name: 'bazz'}];
+    find(objects, (item)=> item.name === 'bar');//returns 2nd item in objects
+    find(objects, (item)=> item.name === 'quq');//returns null
+    function find(arg1, cb) {
+    // write you code here
                 
-        // return you value here
-            return 
-        }  
-        toMap.number = 2
-        module.exports = toMap
-     
+    // return you value here
+    return 
+    }  
+
+    find.number = 15
+    module.exports = find
     </textarea>
     <p>
         please export you function at the end:

@@ -9,18 +9,30 @@
     <link href="../node_modules/codemirror/theme/dracula.css" rel="stylesheet"/>
   </head>
   <body>
-    <h1>Question Number 2: </h1>
-    <p>Write the map function</p>
+    <h1>Question Number 11:</h1>
+    <p>write the trim function.</p>
+    <p>returns new object</p>
+    <p>keys with undefined and null are removed</p>
+    <br/>
+    <p>const trimmed = trim({
+      foo: false,
+      bar: undefined,
+      bazz: null,
+      quq: 0
+      });</p>
+    <br/>
+    <span>console.log(trimmed); //{ foo: false, quq: 0}</span>
+    <br/>
     <textarea id='editor'>
-        function toMap(arr, cb) {
-        // write you code here
+    function trim(obj) {
+    // write you code here
                 
-        // return you value here
-            return 
-        }  
-        toMap.number = 2
-        module.exports = toMap
-     
+    // return you value here
+    return 
+    }  
+
+    trim.number = 11
+    module.exports = trim
     </textarea>
     <p>
         please export you function at the end:

@@ -9,18 +9,42 @@
     <link href="../node_modules/codemirror/theme/dracula.css" rel="stylesheet"/>
   </head>
   <body>
-    <h1>Question Number 2: </h1>
-    <p>Write the map function</p>
+    <h1>Question Number 9:</h1>
+    <p>write the query function</p>
+    <p>const items = [
+      {
+        id: 1,
+        name: 'foo',
+        price: 2
+      },
+      {
+        id: 3,
+        name: 'bar',
+        price: 4
+      },
+      {
+        id: 66,
+        name: 'bazz',
+        price: 4 
+      }
+    ];</p>
+    <br/>
+    <span>console.log(query(items, {  name: 'foo'})); //prints foo object</span>
+    <br/>
+    <span>console.log(query(items, {  price: 4 })); //prints barr and bazz</span>
+    <br/>
+    <span>console.log(query(items, {  price: 4, name: 'bazz' })); //prints bazz</span>
+    <br/>
     <textarea id='editor'>
-        function toMap(arr, cb) {
-        // write you code here
+    function query(value) {
+    // write you code here
                 
-        // return you value here
-            return 
-        }  
-        toMap.number = 2
-        module.exports = toMap
-     
+    // return you value here
+    return 
+    }  
+
+    query.number = 9
+    module.exports = query
     </textarea>
     <p>
         please export you function at the end:
