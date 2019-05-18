@@ -12,10 +12,6 @@ var editor = CodeMirror.fromTextArea(document.getElementById('editor'),{
     lineNumbers: true,
 })
 
-var state = {
-    nextPage : false
-}
-
 const runButton = document.getElementById('run-button'); 
 runButton.onclick = () => {
     const currentCode = editor.getValue();
