@@ -6,6 +6,7 @@ const {input16, answer16First} = require('../test/stretch16')
 const {symbolFail, symbolPass} = require('./domElements')
 // const runTests = require('run-jasmine-browser');
 
+var square = null;
 var editor = CodeMirror.fromTextArea(document.getElementById('editor'),{
     mode: "javascript",
     theme: "dracula",
@@ -27,12 +28,13 @@ runButton.onclick = () => {
         const module = window.newGlobal.module;
         if (typeof module.exports === 'function') {
             if(module.exports.number === 1){
+                square = module.exports
                 if(module.exports(input1) === answer1){
                     console.log('You Passed the first question!')
                     document.body.appendChild(symbolPass)
                 }
                 else{
-                    console.log('You failed the second question!')
+                    console.log('You failed the first question!')
                     document.body.appendChild(symbolFail)
                 }
             }
